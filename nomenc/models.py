@@ -7,6 +7,9 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    class Meta:
+        verbose_name_plural = "Категории"
+
 
 class Product(models.Model):
     name = models.CharField(unique=True, verbose_name="Имя")
@@ -18,3 +21,6 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+
+    class Meta:
+        verbose_name_plural = "Продукты"
